@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Ubuntu', sans-serif !important;
     animation: transitionIn 1s;
     margin-left: auto;
     margin-right: auto;
@@ -10,6 +10,7 @@ body {
     background-image: url(img/background.png);
     background-size: cover;
     background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
 @keyframes transitionIn {
@@ -27,7 +28,10 @@ body {
 hr {
     display: block;
     height: 1px;
+    border: 0;
     border-top: 1px solid rgb(0, 0, 0);
+    margin: 1em 0;
+    padding: 0;
 }
 
 .intro {
@@ -46,14 +50,22 @@ hr {
     align-items: center;
 }
 
-.buttonSurvey {
+.selectZone {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    height: 100px;
 }
 
-.button-28 {
+.surveyButton {
+    width: 30%;
+    height: 80px;
+    border-radius: 0px;
+    font-size: 23px;
+}
+
+button {
     margin: 20px;
     background-color: transparent;
     border: 2px solid #000000;
@@ -73,19 +85,56 @@ hr {
     height: 7%;
 }
 
-.button-28:disabled {
+button:disabled {
     pointer-events: none;
 }
 
-.button-28:hover {
+button:hover {
     color: #fff;
     background-color: #1A1A1A;
     box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
     transform: translateY(-2px);
 }
 
-.button-28:active {
+button:active {
     box-shadow: none;
     transform: translateY(0);
 }
 
+.imgSondage {
+    display: flex;
+    justify-content: space-between;
+    color: #000000;
+    align-items: center;
+    font-style: italic;
+    font-size: 30px;
+}
+
+/* Footer ----------------------------------------------------------------------------------------------------------- */
+section {
+    width: 100%;
+    display: inline-block;
+    background: #ccc;
+    height: 60vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-distributed {
+    margin-top: 120px;
+    background-color: #10101180;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 95%;
+    text-align: left;
+    font: normal 16px sans-serif;
+    padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+    color: #8f9296;
+    font-size: 14px;
+    margin: 0;
+}
