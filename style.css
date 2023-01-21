@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    animation: transitionIn 1s;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    color: white;
+    background-image: url(img/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border-top: 1px solid rgb(0, 0, 0);
+}
+
+.intro {
+    color: #000000;
+    text-align: center;
+    padding: 30px;
+    margin: 30px;
+    font-style: italic;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: black;
+    font-size: 25px;
+    align-items: center;
+}
+
+.buttonSurvey {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.button-28 {
+    margin: 20px;
+    background-color: transparent;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #000000;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    padding: 8px 16px;
+    text-align: center;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    touch-action: manipulation;
+    width: 13%;
+    height: 7%;
+}
+
+.button-28:disabled {
+    pointer-events: none;
+}
+
+.button-28:hover {
+    color: #fff;
+    background-color: #1A1A1A;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+.button-28:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
+
