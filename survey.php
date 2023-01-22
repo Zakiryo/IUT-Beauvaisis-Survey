@@ -5,8 +5,13 @@
     <meta charset="UTF-8">
     <title>Sondage alimentaire - Beauvaisis</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="img/logo.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="scriptSurvey.js"></script>
 </head>
 
 <body style="width: 1500px">
@@ -17,23 +22,41 @@
     </div>
     <hr>
     <div class="content">
-        <div class="intro">
-            <p>L'agglomération du Beauvaisis organise chaque année un sondage à l'intention des habitants sur le sujet de l'alimentation.
-                L'objectif est de récolter des informations concernant les aliments que consomment le plus, en moyenne, les habitants peuplant l'agglomération du Beauvaisis.
-                Les résultats ne sont exploités qu'à des fins statistiques et votre participation compte beaucoup à l'élaboration de ces chiffres. N'hésitez donc pas et répondez
-                dès à présent à notre sondage alimentaire ! Vous pourrez également en amont consulter les résultats.
-            </p>
-        </div>
-        <div class="selectZone">
-            <button class="surveyButton" style="background-color: rgba(17, 42, 126, 0.452);">Répondre au sondage</button>
-            <button class="surveyButton" style="background-color: rgba(139, 6, 6, 0.452);">Consulter les résultats</button>
-
-        </div>
-        <div class="imgSondage">
-            <img src="img/bulle.png" style="width: 15%; height: 15%;">
-            <p>Merci pour votre engagement !</p>
-            <img src="img/sondage.png" style="width: 15%; height: 15%;">
-        </div>
+        <form action="" method="post">
+            <h2>Merci de remplir correctement tous les champs ci-dessous.</h2>
+            <div class="row mt-2">
+                <div class="col-md-6"><label class="labels">Votre prénom : </label><input type="text" maxlength=90 name="firstName" class="form-control" placeholder="Prénom" value=""></div>
+                <div class="col-md-6"><label class="labels">Votre nom de famille : </label><input type="text" maxlength=90 name="lastName" class="form-control" value="" placeholder="Nom de famille"></div>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="birthDate" class="form-label">Votre date de naissance : </label>
+                <input type="date" name="birthDate" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Votre adresse :</label>
+                <input class="form-control" maxlength=90 name="address" type="text" placeholder="Ligne d'adresse">
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-6"><label class="labels">Votre ville : </label><input type="text" maxlength=90 name="city" class="form-control" placeholder="Ville" value=""></div>
+                <div class="col-md-6"><label class="labels">Votre code postal : </label><input type="number" maxlength="5" min="10000" max="99999" name="postalCode" class="form-control" value="" placeholder="Code postal"></div>
+            </div>
+            <br>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Votre numéro de téléphone : </label>
+                <input type="tel" id="phone" name="phone" class="form-control" />
+            </div>
+            <div class="mb-3">
+                <label for="foods" class="form-label">Sélectionnez vos 10 aliments préférés : </label>
+                <select class="selectpicker" multiple aria-label="Default select example" data-live-search="true" name="foods" id="foods">
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                </select>
+            </div>
+            <button type="submit" id="submit">Soumettre vos résultats</button>
+        </form>
     </div>
     <footer class="footer-distributed">
         <div class="footer-left">
