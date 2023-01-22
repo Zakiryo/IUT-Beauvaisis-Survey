@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <script src="scriptSurvey.js" defer></script>
     <title>Sondage alimentaire - Beauvaisis</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -47,12 +48,9 @@
                 <input type="tel" id="phone" name="phone" class="form-control" />
             </div>
             <div class="mb-3">
-                <label for="foods" class="form-label">Sélectionnez vos 10 aliments préférés : </label>
-                <select class="selectpicker" multiple aria-label="Default select example" data-live-search="true" name="foods" id="foods">
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                    <option value="4">Four</option>
+                <label for="selectFoods" class="form-label">Sélectionnez vos 10 aliments préférés : </label>
+                <select class="selectpicker" multiple aria-label="Default select example" data-live-search="true" name="foods" id="selectFoods">
+
                 </select>
             </div>
             <button type="submit" id="submit">Soumettre vos résultats</button>
