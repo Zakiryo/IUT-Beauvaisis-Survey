@@ -17,13 +17,13 @@
 
 <body style="width: 1500px">
     <div class="header">
-        <img src="img/logo.png" width="235" height="120" alt="">
+        <a href="index.php"><img src="img/logo.png" width="235" height="120" alt=""></a>
         <h1>Sondage alimentaire du Beauvaisis</h1>
         <button>Plus d'informations sur le sondage</button>
     </div>
     <hr>
-    <div class="content">
-        <form action="" method="post">
+    <div id="form-survey" class="content">
+        <form  action="" method="post">
             <h2>Merci de remplir correctement tous les champs ci-dessous.</h2>
             <div class="row mt-2">
                 <div class="col-md-6"><label class="labels">Votre prénom : </label><input type="text" maxlength=90 name="firstName" class="form-control" placeholder="Prénom" value=""></div>
@@ -56,6 +56,8 @@
             <button type="submit" id="submit">Soumettre vos résultats</button>
         </form>
     </div>
+
+    <a href="index.php"><button>Retour</button></a>
     <footer class="footer-distributed">
         <div class="footer-left">
             <p>Agglomération du Beauvaisis | Beauvaisis.fr &copy;2023</p>
