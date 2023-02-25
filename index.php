@@ -27,7 +27,7 @@
         </div>
         <div class="selectZone">
             <button class="surveyButton" style="background-color: rgba(17, 42, 126, 0.452);" onclick="window.location.href='survey.php';">Répondre au sondage</button>
-            <button class="surveyButton" style="background-color: rgba(139, 6, 6, 0.452);">Consulter les résultats</button>
+            <button class="surveyButton" style="background-color: rgba(139, 6, 6, 0.452);" onclick="window.location.href='results.php';">Consulter les résultats</button>
 
         </div>
         <div class="imgSondage">

@@ -165,5 +165,51 @@ section {
 /* Dropdown ----------------------------------------------------------------------------------------------------------- */
 #multipleSelect {
     max-width: 100%;
-    width: 40%;
+    width: 50%;
+}
+
+/*Tableau -------------------------------------------------------------------------------------------------------------- */
+
+table {
+    display: grid;
+    border-collapse: collapse;
+    grid-template-columns:
+        minmax(100px, 1.40fr) minmax(200px, 1.20fr) minmax(200px, 0.50fr);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+thead,
+tbody,
+tr {
+    display: contents;
+}
+
+th,
+td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: rgba(11, 12, 23, 0.53);
+}
+
+th {
+    position: sticky;
+    top: 0;
+    background: #6c7ae0;
+    text-align: left;
+    font-weight: normal;
+    font-size: 1.2rem;
+    text-align: center;
+    color: white;
+    border: 0.1px solid rgb(88, 88, 88);
+}
+
+td {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+    text-align: center;
+    border: 0.1px solid rgb(88, 88, 88);
 }
